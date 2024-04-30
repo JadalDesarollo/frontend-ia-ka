@@ -5,12 +5,18 @@ import { useFormContext } from "../context/FormContext";
 function Result({ nextStep, handleFormData, values, prevStep }: any) {
     const { valueForm, onChange } = useFormContext()
     const [isLoading, setisLoading] = useState(false)
-    const [result, setResult] = useState("")
+    const [result, setResult] = useState({
+        predict: 0,
+        recomendaciones: {}
+    })
     const predict = async () => {
         setisLoading(true)
-        const result = JSON.stringify(await predictForm(valueForm))
+        const resultApi = (await predictForm(valueForm) as { predict: number, recomendaciones: any })
         console.log(result)
-        setResult(result)
+        setResult({
+            predict: resultApi.predict || 0,
+            recomendaciones: resultApi.recomendaciones
+        })
         setisLoading(false)
     }
 
@@ -31,10 +37,15 @@ function Result({ nextStep, handleFormData, values, prevStep }: any) {
         )
     }
     return (
-        <div >
+        <div>
             <h4>Resultados</h4>
+            <h6>Nivel <strong>{result.predict}</strong></h6>
             <div>
-                {result}
+                <ul>
+                    {Object.values(result.recomendaciones).map((recomendacion, index) => (
+                        <li key={index}>{recomendacion as string}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

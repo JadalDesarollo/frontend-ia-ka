@@ -10,6 +10,4 @@ export const predictForm = async (formValue: ValueFormPredict) => {
   });
   const data = await response.json();
   return data
-  console.log({formValue})
-  console.log(data);
 };
