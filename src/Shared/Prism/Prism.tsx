@@ -4,9 +4,10 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { Breadcrumb, BreadcrumbItem, Input, Modal, Button, ModalHeader, Label, ModalBody, Form, Row, Col, ModalFooter, Dropdown, DropdownMenu, DropdownItem, UncontrolledDropdown, DropdownToggle } from "reactstrap";
 import { addDays } from 'date-fns';
 import { DateRangePicker } from 'react-date-range';
+import { useAuthContext } from '../../Auth/context/authContext';
 
 export const PageHeader = (props: any) => {
-
+  const { auth, checkToken, logout, loginSucess } = useAuthContext();
   const [dropdownOpen, setDropdownOpen] = useState<any>(false);
 
   const selectopen = () => setDropdownOpen((prevState: any) => !prevState);
@@ -86,10 +87,19 @@ export const PageHeaderstyle = (props: any) => {
     <div className="page-header" >
       <div className="page-leftheader"
       style={{
-        margin:"auto"
+        margin:"auto",
+        maxWidth:"50rem",
+    
       }}
       >
-        <h4 className="page-title">{props.title}</h4>
+        <h4 className="page-title "
+        style={
+          {
+           
+            fontSize:"1.5rem",
+           
+          }
+        }>{props.title}</h4>
       </div>
       {/* <div className="page-rightheader ms-auto d-lg-flex d-none">
         <Breadcrumb tag="ol" className="">

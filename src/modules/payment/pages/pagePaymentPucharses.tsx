@@ -8,7 +8,7 @@ const PagePaymentControl = () => {
 
     return (
         <div>
-            <PageHeaderstyle title="Titulo test" home="titulo" Pages="predicción" />
+            <PageHeaderstyle title="Hola, soy tu asistente que te ayudará con evaluar el nivel de riesgo que puede tener tu corazon en sufrir alguna enfermedad. Ayudame respondiendo esta serie de preguntas..." home="titulo" Pages="predicción" />
             <div>
                 <Row>
                     <Col lg="12" xl="12" md="12" sm="12">
