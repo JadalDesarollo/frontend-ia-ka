@@ -41,6 +41,7 @@ function Result({ nextStep, handleFormData, values, prevStep }: any) {
             <h4>Resultados</h4>
             <h6>Nivel <strong>{result.predict}</strong></h6>
             <div>
+                <h6>Recomendaciones</h6>
                 <ul>
                     {Object.values(result.recomendaciones).map((recomendacion, index) => (
                         <li key={index}>{recomendacion as string}</li>

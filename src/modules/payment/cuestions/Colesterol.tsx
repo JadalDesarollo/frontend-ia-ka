@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {  Form, Input,Button, Label, FormText } from "reactstrap";
+import { useFormContext } from "../context/FormContext";
 function Colesterol({ nextStep, handleFormData, values, prevStep }: any) {
+    const { valueForm, onChange } = useFormContext()
     const submitFormData = (e: { preventDefault: () => void; }) => {
         nextStep();
     };
@@ -14,11 +16,12 @@ function Colesterol({ nextStep, handleFormData, values, prevStep }: any) {
                             type="radio"
                             className="custom-control-input"
                             name="example-radios2"
-                            value="option1"
+                            value="0"
+                            //onChange={onChange}
                             defaultChecked
                         />
                         <span className="custom-control-label custom-control-label-lg">
-                            0 - Deseable
+                            Deseable
                         </span>
                     </Label>
                     <Label className="custom-control custom-radio custom-control-lg">
@@ -26,10 +29,11 @@ function Colesterol({ nextStep, handleFormData, values, prevStep }: any) {
                             type="radio"
                             className="custom-control-input"
                             name="example-radios2"
-                            value="option2"
+                            //onChange={onChange}
+                            value="1"
                         />
                         <span className="custom-control-label custom-control-label-lg">
-                            1 - Limite superior del rango normal
+                            Limite superior del rango normal
                         </span>
                     </Label>
 
@@ -38,10 +42,11 @@ function Colesterol({ nextStep, handleFormData, values, prevStep }: any) {
                             type="radio"
                             className="custom-control-input"
                             name="example-radios2"
-                            value="option2"
+                            //onChange={onChange}
+                            value="2"
                         />
                         <span className="custom-control-label custom-control-label-lg">
-                            2 - Alto
+                            Alto
                         </span>
                     </Label>
                 </div>

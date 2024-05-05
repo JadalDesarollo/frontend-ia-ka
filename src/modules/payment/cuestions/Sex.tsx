@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Col, Form, FormGroup, InputGroup, Input, Row, Button, Label, FormText } from "reactstrap";
+import { useFormContext } from "../context/FormContext";
 function Sex({ nextStep, handleFormData, values }: any) {
+    const { valueForm, onChange } = useFormContext()
     const submitFormData = (e: { preventDefault: () => void; }) => {
         nextStep();
     };
@@ -13,8 +15,8 @@ function Sex({ nextStep, handleFormData, values }: any) {
                         <Input
                             type="radio"
                             className="custom-control-input"
-                            name="example-radios2"
-                            value="option1"
+                            name="sex"
+                            value="0"
                             defaultChecked
                         />
                         <span className="custom-control-label custom-control-label-lg">
@@ -25,8 +27,8 @@ function Sex({ nextStep, handleFormData, values }: any) {
                         <Input
                             type="radio"
                             className="custom-control-input"
-                            name="example-radios2"
-                            value="option2"
+                            name="sex"
+                            value="1"
                         />
                         <span className="custom-control-label custom-control-label-lg">
                             Mujer

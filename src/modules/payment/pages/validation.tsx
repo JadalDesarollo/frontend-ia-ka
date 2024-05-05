@@ -6,6 +6,7 @@ import Age from "../cuestions/Age";
 import Colesterol from "../cuestions/Colesterol";
 import MoreCuestions from "../cuestions/MoreCuestions";
 import MoreCuestions2 from "../cuestions/MoreCuestions2";
+import MoreCuestions3 from "../cuestions/MoreCuestions3";
 import Result from "../cuestions/Result";
 
 
@@ -43,6 +44,7 @@ export function WizardForm() {
                 </div>
             );
 
+
         case 3:
             return (
                 <div className="">
@@ -51,8 +53,13 @@ export function WizardForm() {
                     </div>
                 </div>
             );
-
         case 4:
+            return (
+                <div className="custom-margin">
+                    <MoreCuestions2 nextStep={nextStep} handleFormData={handleInputData} prevStep={prevStep} values={formData} />
+                </div>
+            );
+        case 5:
             return (
                 <div className="">
                     <div className="custom-margin">
@@ -60,16 +67,16 @@ export function WizardForm() {
                     </div>
                 </div>
             );
-        case 5:
+        case 6:
             return (
                 <div className="">
                     <div className="custom-margin">
-                        <MoreCuestions2 nextStep={nextStep} handleFormData={handleInputData} prevStep={prevStep} values={formData} />
+                        <MoreCuestions3 nextStep={nextStep} handleFormData={handleInputData} prevStep={prevStep} values={formData} />
                     </div>
                 </div>
             );
 
-        case 6:
+        case 7:
             return (
                 <div className="">
                     <div className="custom-margin">

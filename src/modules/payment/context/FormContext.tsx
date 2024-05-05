@@ -8,7 +8,6 @@ interface FormContextType {
 }
 const FormContext = createContext<FormContextType | undefined>(undefined)
 export const FormProvider: React.FC<{ children?: React.ReactNode; }> = ({ children }: { children?: React.ReactNode }) => {
-
     const [valueForm, setValueForm] = useState<ValueFormPredict>(
         {
             edad_cardiovascular: 30,
@@ -33,7 +32,6 @@ export const FormProvider: React.FC<{ children?: React.ReactNode; }> = ({ childr
             nivelEstres: 1
         }
     )
-
     const onChange = (e: any) => {
         const name = e.target.name
         const value = e.target.value

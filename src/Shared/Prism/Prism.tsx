@@ -96,7 +96,7 @@ export const PageHeaderstyle = (props: any) => {
         style={
           {
            
-            fontSize:"1.5rem",
+            fontSize:"1.4rem",
            
           }
         }>{props.title}</h4>
