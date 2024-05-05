@@ -8,7 +8,7 @@ function MoreCuestions({ nextStep, handleFormData, values, prevStep }: any) {
             <h3 className='mg-b-20'>¿Alguna de las siguientes afirmaciones se aplica a usted?</h3>
             <CustomCuestion cuestion={"Fumo al menos 1 cigarrillo"} name={"fumador"} />
             <CustomCuestion cuestion={"Me detectaron Diabetes"} name={"diabetes"} />
-            <CustomCuestion cuestion={"Realizo Actividad Fisica"} name={"actividadFisica"} />
+          
             <CustomCuestion cuestion={"Uso Anticoagulantes"} name={"usoAnticoagulantes"} />
             <CustomCuestion cuestion={"Uso Medicamentos para controlar mi presión"} name={"usoMedicamentosPresion"} />
             <CustomCuestion cuestion={"Tuve cirugías Previas en los últimos 2 años"} name={"cirugiasPrevias"} />

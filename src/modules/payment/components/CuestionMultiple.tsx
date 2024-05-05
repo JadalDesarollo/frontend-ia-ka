@@ -3,7 +3,7 @@ import { Form } from 'react-router-dom'
 import { Col, Input, Label } from 'reactstrap'
 import { useFormContext } from '../context/FormContext'
 
-const CustomMultiple = ({ cuestion, name, alternatives }) => {
+const CustomMultiple = ({ cuestion, name, alternatives, isValue0 = false }) => {
     const getRamdon = Math.random()
     const { valueForm, onChange } = useFormContext()
 
@@ -22,11 +22,11 @@ const CustomMultiple = ({ cuestion, name, alternatives }) => {
                                         type="radio"
                                         className="custom-control-input"
                                         name={name}
-                                        value={`${index}`}
+                                        value={isValue0 ? index : `${index + 1}`}
                                         onChange={onChange}
                                     />
                                     <span className="custom-control-label custom-control-label-lg">
-                                      {  item}
+                                        {item}
                                     </span>
                                 </Label>
                             )

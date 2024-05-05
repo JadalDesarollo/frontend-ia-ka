@@ -12,7 +12,6 @@ function MoreCuestions3({ nextStep, handleFormData, values, prevStep }: any) {
     return (
         <div>
             <h3 className='mg-b-20'>¿Qué otras afirmaciones se aplican a usted?</h3>
-            
             <CustomCuestion cuestion={"Presento Antecedentes Familiares con problemas cardiovasculares"} name={"antecedentesCardiovasculares"} />
             <CustomCuestion cuestion={"Tengo Antecedentes Cardiacos (Dolor en el pecho)"} name={"antecedentesCardiacos"} />
             <CustomCuestion cuestion={"Tengo Antecedentes Respiratorios (Falta de oxígeno, ahogo)"} name={"antecedentesRespiratorios"} />
